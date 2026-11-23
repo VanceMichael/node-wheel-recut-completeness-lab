@@ -1,0 +1,379 @@
+{
+  "phases": [
+    "first",
+    "change"
+  ],
+  "routes": [
+    {
+      "path": "/assembly",
+      "method": "GET",
+      "status": 200,
+      "phase": "change",
+      "data": [
+        {
+          "work": "Z-017",
+          "build": "B2",
+          "left": "W9",
+          "right": "W7",
+          "validFrom": "09:15",
+          "signed": true,
+          "oldTag": "T7"
+        },
+        {
+          "work": "Z-017",
+          "build": "B1",
+          "left": "W7",
+          "right": "W9",
+          "validFrom": "08:00",
+          "retired": "09:00"
+        },
+        {
+          "work": "Z-018",
+          "build": "C1",
+          "left": "W4",
+          "right": "W5",
+          "signed": true,
+          "validFrom": "08:45",
+          "oldTag": "T4"
+        }
+      ]
+    },
+    {
+      "path": "/assembly",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "work": "Z-017",
+          "build": "B1",
+          "left": "W7",
+          "right": "W9",
+          "validFrom": "08:00",
+          "retired": "09:00"
+        },
+        {
+          "work": "Z-017",
+          "build": "B2",
+          "left": "W9",
+          "right": "W7",
+          "validFrom": "09:15",
+          "signed": false
+        },
+        {
+          "work": "Z-018",
+          "build": "C1",
+          "left": "W4",
+          "right": "W5",
+          "signed": true,
+          "validFrom": "08:45",
+          "oldTag": "T4"
+        }
+      ]
+    },
+    {
+      "path": "/repair-log",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "wheel": "W9",
+          "at": "09:05",
+          "invalidates": [
+            "轮缘"
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/runs",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "id": "J1",
+          "tag": "T7",
+          "time": "08:42",
+          "view": "front",
+          "side": "right",
+          "project": "轮径",
+          "original": "/graphs/J1/raw",
+          "until": "10:20"
+        },
+        {
+          "id": "J2",
+          "tag": "T7",
+          "time": "09:20",
+          "view": "reverse",
+          "side": "right",
+          "project": "轮缘",
+          "original": "/graphs/J2/raw",
+          "preview": "/graphs/J2/preview",
+          "until": "10:00",
+          "review": "/graphs/J2/review"
+        },
+        {
+          "id": "J3",
+          "tag": "T7",
+          "time": "09:20",
+          "view": "front",
+          "side": "right",
+          "project": "裂纹",
+          "original": "/graphs/J3/raw",
+          "until": "10:10"
+        },
+        {
+          "id": "J4",
+          "tag": "T4",
+          "time": "08:55",
+          "view": "front",
+          "side": "left",
+          "project": "裂纹",
+          "original": "/graphs/J4/raw",
+          "until": "10:20"
+        },
+        {
+          "id": "G-left-1",
+          "tag": "T4",
+          "time": "08:59",
+          "view": "front",
+          "side": "left",
+          "project": "裂纹",
+          "original": "/graphs/G-left-1/raw",
+          "until": "10:20"
+        },
+        {
+          "id": "G-left-2",
+          "tag": "T4",
+          "time": "08:59",
+          "view": "front",
+          "side": "left",
+          "project": "轮径",
+          "original": "/graphs/G-left-2/raw",
+          "until": "10:20"
+        },
+        {
+          "id": "G-left-3",
+          "tag": "T4",
+          "time": "08:59",
+          "view": "front",
+          "side": "left",
+          "project": "轮缘",
+          "original": "/graphs/G-left-3/raw",
+          "until": "10:20"
+        },
+        {
+          "id": "G-right-1",
+          "tag": "T4",
+          "time": "08:59",
+          "view": "front",
+          "side": "right",
+          "project": "裂纹",
+          "original": "/graphs/G-right-1/raw",
+          "until": "10:20"
+        },
+        {
+          "id": "G-right-2",
+          "tag": "T4",
+          "time": "08:59",
+          "view": "front",
+          "side": "right",
+          "project": "轮径",
+          "original": "/graphs/G-right-2/raw",
+          "until": "10:20"
+        },
+        {
+          "id": "G-right-3",
+          "tag": "T4",
+          "time": "08:59",
+          "view": "front",
+          "side": "right",
+          "project": "轮缘",
+          "original": "/graphs/G-right-3/raw",
+          "until": "10:20"
+        }
+      ]
+    },
+    {
+      "path": "/graphs/J1/raw",
+      "method": "GET",
+      "status": 200,
+      "phase": "first",
+      "file": "J1.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/J1/raw",
+      "method": "GET",
+      "status": 200,
+      "phase": "change",
+      "file": "J1.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/J2/raw",
+      "method": "GET",
+      "status": 200,
+      "phase": "first",
+      "file": "J2.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/J3/raw",
+      "method": "GET",
+      "status": 200,
+      "phase": "first",
+      "file": "J3.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/J3/raw",
+      "method": "GET",
+      "status": 200,
+      "phase": "change",
+      "file": "J3.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/J4/raw",
+      "method": "GET",
+      "status": 200,
+      "phase": "first",
+      "file": "J4.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/J4/raw",
+      "method": "GET",
+      "status": 200,
+      "phase": "change",
+      "file": "J4.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/J2/raw",
+      "method": "GET",
+      "status": 410,
+      "phase": "change",
+      "data": {
+        "reason": "在线环形窗口到期"
+      }
+    },
+    {
+      "path": "/graphs/J2/preview",
+      "method": "GET",
+      "status": 200,
+      "file": "thumb.txt",
+      "mime": "text/plain"
+    },
+    {
+      "path": "/graphs/J2/review",
+      "method": "GET",
+      "status": 404,
+      "phase": "first",
+      "data": {
+        "reason": "等待复核通道归档"
+      }
+    },
+    {
+      "path": "/graphs/J2/review",
+      "method": "GET",
+      "status": 200,
+      "phase": "change",
+      "file": "J2-review.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/handover-existing",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "ticket": "H-6",
+          "work": "Z-017",
+          "build": "B1",
+          "wheel": "W9",
+          "scope": [
+            "轮径"
+          ],
+          "recipient": "复检甲"
+        }
+      ]
+    },
+    {
+      "path": "/handover/review",
+      "method": "POST",
+      "status": 202,
+      "expectedBody": {
+        "work": "Z-017"
+      },
+      "receipt": {
+        "ticket": "H-9",
+        "recipient": "复检甲",
+        "state": "received"
+      }
+    },
+    {
+      "path": "/graphs/G-left-1/raw",
+      "method": "GET",
+      "status": 200,
+      "file": "G-left-1.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/G-left-2/raw",
+      "method": "GET",
+      "status": 200,
+      "file": "G-left-2.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/G-left-3/raw",
+      "method": "GET",
+      "status": 200,
+      "file": "G-left-3.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/G-right-1/raw",
+      "method": "GET",
+      "status": 200,
+      "file": "G-right-1.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/G-right-2/raw",
+      "method": "GET",
+      "status": 200,
+      "file": "G-right-2.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/graphs/G-right-3/raw",
+      "method": "GET",
+      "status": 200,
+      "file": "G-right-3.csv",
+      "mime": "text/csv"
+    },
+    {
+      "path": "/project-limits",
+      "method": "GET",
+      "status": 200,
+      "data": [
+        {
+          "project": "裂纹",
+          "max": 0
+        },
+        {
+          "project": "轮径",
+          "min": 845,
+          "max": 855
+        },
+        {
+          "project": "轮缘",
+          "min": 12,
+          "max": 15
+        }
+      ]
+    }
+  ]
+}
