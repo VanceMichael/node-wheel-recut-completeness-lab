@@ -92,6 +92,11 @@ export function createSources() {
     const params = Object.fromEntries(url.searchParams)
     try {
       const body = req.method === 'POST' || req.method === 'PUT' ? await readBody(req) : {}
+      if (req.method === 'GET' && url.pathname === '/') {
+        if (!exchange.forms?.length) return send(res, 200, { status: 'ready', phase })
+        const links = exchange.forms.map((form, i) => `<li><a href="/portal/${i+1}">${h(form.title)}</a></li>`).join('')
+        return send(res, 200, `<!doctype html><html lang="zh-CN"><meta charset="utf-8"><title>业务资料交接</title><h1>业务资料交接</h1><ul>${links}</ul></html>`, 'text/html; charset=utf-8')
+      }
       if (req.method === 'PUT' && url.pathname === '/_source/phase') {
         if (!exchange.phases.includes(body.phase)) return send(res, 422, { notice: '未知来源时点' })
         phase = body.phase
